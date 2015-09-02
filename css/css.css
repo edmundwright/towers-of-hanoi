@@ -1,0 +1,70 @@
+body, html, ul, li, figure {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  font: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+
+  background: transparent;
+}
+
+ul {
+  list-style: none;
+}
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#hanoi-game {
+  width: 900px;
+  margin: auto;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.hanoi-tower {
+  float: left;
+  width: 300px;
+  height: 213px;
+  border-bottom: 10px solid black;
+}
+
+.hanoi-tower:hover {
+  background: yellow;
+  cursor: pointer;
+}
+
+.hanoi-tower > li {
+  border-bottom: 1px solid transparent;
+  margin: auto;
+  height: 70px;
+  border-radius: 5px;
+}
+
+.hanoi-tower.selected {
+  background: yellow;
+}
+
+#disc1 {
+  width: 90px;
+  background: green;
+  border-bottom: 1px solid green;
+}
+
+#disc2 {
+  width: 190px;
+  background: red;
+  border-bottom: 1px solid red;
+}
+
+#disc3 {
+
+  width: 290px;
+  background: blue;
+  border-bottom: 1px solid blue;
+}
