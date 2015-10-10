@@ -24,19 +24,19 @@
   };
 
   View.prototype.render = function () {
-    var towers = this.game.towers
+    var towers = this.game.towers;
     $(".hanoi-tower").each(function () {
-      var tower = towers[$(this).data('id')]
+      var tower = towers[$(this).data('id')];
       $(this).find("li").each(function () {
-        var discSpace = tower[$(this).data('id')]
+        var discSpace = tower[$(this).data('id')];
         $(this).attr('id', "disc" + discSpace);
-      })
+      });
     });
   };
 
   View.prototype.setupHandlers = function () {
     this.$el.on("click", "ul", function(e){
-      var move = $(e.currentTarget)
+      var move = $(e.currentTarget);
 
       this.move(move);
 
@@ -46,8 +46,8 @@
         this.$el.off('click');
         alert("Well done!");
       }
-    }.bind(this))
-  }
+    }.bind(this));
+  };
 
   View.prototype.move = function (move) {
     if (this.startMove !== null) {
@@ -62,7 +62,7 @@
       this.startMove = move;
       this.startMove.toggleClass('selected');
     }
-  }
+  };
 
 
 })();
